@@ -1,0 +1,221 @@
+---
+title: "Contextual influences on coefficient variances in duration reproduction"
+shorttitle: "contextual influences on CV"
+author: 
+  - name: Yue, Ren
+    affiliation: "1"
+    address: Leopoldstr. 13, Munich, Germany, 
+    email: yue.ren@psy.lmu.de
+  - name: Shi, Zhuanghua 
+    corresponding: yes    # Define only one corresponding author
+    affiliation: "1"
+    email: strongway@psy.lmu.de
+  - name: Müller, Hermann J. 
+    affiliation: "1,2"
+    email: hmueller@psy.lmu.de
+    
+affiliation:
+  - id: 1
+    institution: General and Expeirmental Psychology, LMU Munich, Munich, Germany
+  - id: 2
+    institution: Department of Psychological Science, Birkbeck College, London, UK
+    
+abstract: |
+
+ A constant coefficient of variation (CV, also known as scalar property) is a key signature for sub- and supra-second timing(Gibbon, 1977; Shi, Church, & Meck, 2013). In certain situations scalar property can be violated, particularly for large range of interval timing(Bizo, Chu, Sanabria, & Killeen, 2006). For example, by employing visual timing reproduction task, Lewis and Miall(2009) found a continuous logarithmic decrease in CV with increase of reproduced duration. However, most finding for violation of scalar property did not control contextual biases(e.g., interval mixing), which could be a major factor causing the violation of scalar property. To address this issue, we conducted two experiments under visual and auditory modality, respectively, where interval mixing was considered.Experiment 1 was conducted under visual modality, nine intervals range from 300ms to 16s were randomly mixed across trials in session 1(block-mix condition), where in session 2(block-separate condition), the same intervals were divided into three subgroups (300ms to 900ms, 1s to 9s, 10s to 16s) for testing in separated blocks. Reproduction task was employed by key press; Experiment 2 used identical paradigm under auditory modality. Results in visual modality showed a significant difference(p>0.05) of the tendency of CV between two sessions, where a continuous decrease in CV against increasing duration was found under block-mix condition, while a decreasing trend of CV was now shown. In auditory modality, decreasing trends of CV were shown under both conditions, but with gentle trends (smaller slope value of simple logarithmic regression) and higher task precision. By ruling out the potential interval mixing effect, the estimated CVs for sub- and supra-second reproduction were rather similar in visual modality, indicating that violation of scalar property in interval reproduction is partially caused by duration mixing. Modality difference was shown in Experiment 2, where no interval mixing effect was shown in auditory timing. The findings suggest that contextual calibration, such as interval mixing, may play an important role in timing precision. In addition, different strategies may also be adopted for different modalities of timing.
+
+note: |  
+  This research was supported by the German Research Foundation SH 166/3-1 to ZS. The funding institution had no role in study design, data collection, analysis, decision to publish, or preparation of the manuscript. 
+
+
+keywords: "reproduction, coefficient variation (CV), Contexts"
+
+
+class: man
+lang: english
+figsintext: no
+lineno: yes
+bibliography: ref.bib
+
+output: papaja::apa6_pdf
+
+---
+
+```{r message = FALSE, warning = FALSE}
+
+source('loadPackages.R')
+usePackage('papaja')
+apa_prepare_doc() # Prepare document for rendering
+read_chunk('Reproduction_code_2.R')
+
+```
+
+^[Introducing importance of timing to daily activity. Need explanative, examples]
+Humans are surprisingly good at timing and sensorimotor coordination. For example, drivers race in Formula One motor race require a precise control under milliseconds at the speed up to 300km/h. A tiny deviation may cause a crash accident, as happened to Fernando Alonso in recent Australian Gran Prix. Dancing, as we all enjoy, requires accurate sensorimotor coordination to perform a perfect harmony with your partner. Not only for subsecond and seconds, we are also good at macro-level time estimation. Early work by Jürgen Aschoff using an underground 'bunker' to isolate participants from any external timing cues showed that we can accurate maintain 24-hour circadian rhythms. ^[Yue, here you need to find related literature and perhaps other good examples. ]
+
+^[Introducing precision measure - CV and related Weber's law. Note, 'accuracy' is usually for the deviation from the mean in the literature. 'precision' is for the variability of estimation.]
+
+One common measure of relative precision of time estimation is coefficient of variation (CV) ^[citations of CV]. Mathematically, it is defined as the ratio of the standard deviation $\sigma$ to the mean $\mu$:
+
+$$ c_v = \frac {\sigma}{\mu} $$
+
+Early animal studies on timing (e.g., Catania 1970) showed one remarkable feature of time estimation. When subjects (e.g., pigeons) were reinforced if their latency to peck after the onset of a key light exceeded some minimum criterion values $T$, the variability of the time estimation is proportional to the anchor $T$. But the ratio of the standard deviation to the mean latency remained approximately constant across different $Ts$. This rescaling property led to a late development of scalar timing theory (Gibbon, 1984, 1991). The constant CV suggests the difference limen for duration judgments is closely related to Weber-Fechner's law, which has been widely accepted in describing the sensitivity of measuring perceptive magnitude. 
+
+^[here introduce literature that confirm the constant CVs.]
+
+~According to the law, the variable of estimation is proportional to the magnitude of the stimuli, where the just noticeable difference is stated. Dubbed the ‘scalar property’ (Gibbon, Meck) within the field of interval timing, this law predicts the variation of the estimated intervals should increase linearly with the interval value . So by calculating the standard deviation in estimates divided by the corresponding interval, termed coefficient of variance(CV), this measurement should remain constant across a range of intervals within single mechanism of time perception.~ 
+
+^[previous opposite findings that against constancy of CV]
+During the past two decades, several studies have reported different kinds of distributions of CVs against intervals but constant, where a systematic violation of scalar property was stated. In 2009, by employing an interval reproduction task, lewis and Miall (2009) discovered a continuous logarithmic decrease in CV in a wide time range(68ms to 16.7min), where the break points of distinct clock mechanisms were carefully examined. ^[Yue, you need to expand the literature here. How did Lewis and Miall did, what did they measured and found - brief text here]. 
+
+^[A short note the standard calcuation of CV by using mean estimation of $T$, but this fits for unbiased etimation. Some literature use objective mean, not estimated mean, for example, by Burr's group. Then introduce potential biased estimation influences the CV calculation. And proposed using objective mean.]
+
+Time can also be easily distorted, the feeling for two minutes is definitely different when you are in the middle of a test or you are on the beach in Spain.
+
+^[construct hypotheis here. Potential influences on CV, such as contextual calibration. ]
+However, we doubt about the conclusion that the violation of the fundamental percept of timing was found, since temporal context plays an important role in affecting the precision of perception but rather by violating the general law where the standard deviation scales with the temporal intervals.    
+
+(Why Bayesian Model in explaining the contextual effect on the precision of perception.)
+Bayesian’s rule provided a integrated framework for temporal perception that combined context bias and perceptual likelihood into one statistical inference(Zhuanghua Shi, David Burr, Jazayeri). 
+
+According to this model, the estimated duration S, which quantified as the posterior probability $P(D|S)$, is determined by two sources of information: The likelihood function P(S|D) that quantifies the statistics of sample intervals consistent with the tested intervals, and the prior probability  distribution function P(S) where the external context was involved that observers may encounter. 
+(need some figure here to illustrate the whole model and how to calculate the relations between the variations)
+
+$$ P(D|S)  P(S|D) P(S)$$
+
+(previous study: bayesian model in explaining temporal bias)
+In 2010, by reproducing time intervals from humans in subsecond-to-second range, Jazayeri and Shadlen suggested  a Bayesian observer associated with the Byes least-squares(BLS) could account for the temporal bias where subjects’s estimations were dependent on both the sample intervals and the prior distribution. In this model, when the likelihood and the prior are independent Gaussians, that is P(S|D)~N(us, ds), P(D)~N(up, dp), the variance of  optimal estimate is 
+
+$$dp^2 *ds^2 / (dp^2 + ds^2) $$
+
+which guarantees a minimum variance among all possible linear weighted combinations between the sensory estimate and the prior.()
+
+(why CV would decrease using the model)
+When applying this model into reproduction task, we could calculate the posterior estimation based on this model.
+For the prior probability, a same temporal context shares one variance dp for all the tested intervals. 
+For each given external duration, Di is corresponding to a variance di from each likelihood function. According to the scalar property, di is proportional to the sample interval Di. 
+
+$$di  k* Di.$$
+(Here we didn’t take motor noise into consideration, only the bias from the perceptual estimations)
+
+Now when we try to predict the CVs of the estimations using this model. According to the definition, CV is the ratio between the standard deviation of the data points and the value of each interval. In this case, for each data point, 
+
+$$CVi = dpi / Di$$
+
+By taking equations () and () into calculation, 
+
+$$Cvi  1/Di (CV^2 = dp/ (Di^2 + dp^2/k^2))$$
+
+As have been demonstrated by Jazayeri, the BLS model fits perfectly for the data from temporal reproduction task. Using the same model for prediction in temporal reproduction task, when taking the temporal context into consideration, CVs would decrease as the intervals increase. 
+(So previous studies that suggesting a systematical violation of scalar property is not convincing)
+
+[Using the model, central tendency effect has been well explained where an optimal strategy was adopted in improving the accuracy while tasking.(percussionist) ]
+
+
+(what we did: distinguish conditions/using bayesian model to explain the decrease/)
+
+In order to demonstrate this prediction, we conducted four experiments within two modalities: visual and auditory, respectively. For each modality, we tested the same sample intervals for a temporal reproduction task in two conditions: Mix condition and Block condition. Under the Mix condition, all the intervals were mixed together and tested within one block, while under the Block condition, all the intervals were divided into three groups: short, medium and long, and tested separately. 
+
+(what we show, results)
+By dividing sample intervals into two conditions, we anticipated the condition difference where CVs show different tendencies against intervals. We calculated the mean CVs for each tested interval, simple logarithmic regressions were fit for data from each experiment. A condition difference was significantly illustrated where under Mix condition from both modalities, a decreasing tendency was found while under Block condition, 
+
+# Methods
+
+Experiment 1 aimed to examine the precision of duration reproduction in visual modality with which participants could estimate a number of intervals ranging from 300ms to 16s. We adopted classical production-reproduction task in the study, which requires from participants the reproduction of the duration of a previously presented stimulus as accurate as they could (Figure 1).  Two conditions: block-mix and block-group, were used as separate sessions in the experiment. Under the block-mix condition, all the intervals adopted in the experiment mixed in one block while under the block-group condition, same intervals were divided into different groups ranking from the shortest to the longest.
+
+![Paradigm for production-reproduction task in each trial. The task consists of two phases: (i). Production phase, which was initiated by a key press, causing the color change of the visual square from grey to white. After the presentation of the stimulus for the certain interval, the changing of the color back to grey indicated the termination of presentation where requested key release from subjects. (ii). Reproduction phase, identically initiated as in the presentation phase, subjects were asked to terminate the reproduction phase according to their estimation. In the meanwhile, the duration of the key holding was recorded as ‘reproduction estimation’ for further analysis. (auditory modality also included in this scheme)](paradigm.pdf)
+
+## a) Participants
+
+Initially 27 participants (16 female, mean age of 24.1) that divided into two groups for different sessions were recruited for the experiment. 5 participants were outliers (2xSD from the group mean). In each session of the experiment, data from 11 participants were adopted. Participants were given written informed consent in accordance with the declaration of Helsinki (2008), and were paid for their participation of 8 Euros per hour. All had normal or corrected-to-normal vision, normal hearing, and no somatosensory disorders.
+
+## b) Apparatus and Stimuli
+
+The experiments took place in an isolated cabin with dim lit, sound attenuated environment. Visual stimuli that employed in the experiments were squares (##° x ##°) presented on a 21-inch CRT monitor with a refresh rate of 100Hz, subtending 36.5° x 27° at the subjects view distance. Two colors were chosen for the stimuli of visual squares: gray (## cd/m2) and white (## cd/m2), while background was black (## cd/m2).
+
+## c) Procedure and Design
+
+9 log-spaced intervals, 0.30, 0.49, 0.81, 1.33, 2.19, 3.60, 5.92, 9.73, 16.00s, were used for duration reproduction.  In the block-mix session, all 9 intervals were used within one block while in the block-group session, 9 intervals divided into three groups that ranging respectively from: short: 0.30-0.81s, intermediate: 1.33-3.60s, long: 5.92-16.00s, were used in different blocks. 
+
+Each session took the participant approximately 1.5 hours in 15 blocks and each interval repeated 30 times in the whole session. Participants were asked to take a break outside the cabin after half trails of the whole experiment. To prevent from getting the duration estimation by counting, participants were required to avoid any form of counting during both presentation and reproduction phase. Before each session, a short-term training session consists of three blocks (9 trials in each block) were employed. For the block-mix condition, all the nine intervals were trained in random order within the same block while for the block-group condition, all the intervals were trained in three blocks corresponding to three time ranges (mentioned above), and counter-balanced within participants.
+
+In each trial, the task consisted of two phases: production and reproduction phase. A trial started with a word cue ‘Presentation’ for 300ms, followed by a white square on the center of the monitor. Participants were instructed using the left index finger to press left arrow key to initiate the production phase. The key press triggered the color change of square from white to gray. After a given interval, selected from the 9 intervals, the color of the square automatically changed the gray back to white, indicating the termination of stimulus. Participants were also instructed to release the key as soon as possible. After an interval for 250ms,  a word cue of ‘reproduction’ was appeared on the center screen for 300ms, followed by a white square appeared on the center of the screen, prompting participants to reproduced the given duration by pressing the right arrow key with their right index finger. The key press immediately triggered the change of square color from white to gray. Participants were ask to keep pressing the key until they thought the pressed interval was the same duration in the production phase, and then to release the key immediately. The key release also turned the color of the square from gray to white, indicating the offset of the reproduction. After a certain interval (randomly chosen from 500ms to 1000ms), a next trial began. 
+
+# Results
+
+## Data quality analysis
+
+The durations of key press from both production and reproduction were recorded during the task. For further analysis, we chose the trials that fit two criteria: 
+
+1). Those trials with a key-press time from reproduction less or more than 50% of the tested intervals . By removing these trials, operations mistakes such as releasing keys accidentally or forgetting to release keys were excluded. 
+
+2). Judging from the key press durations from production phase, those trials with a key release before the offset of the stimulus or after 1 second delay of the offset were excluded. These trials may suggest lapses of attention during the task.
+
+After marking the trials as 'outliers' that fit those two criteria above, we also excluded data from the subjects that with a percentage of outliers above 30%, where 5 out of 49 participants were excluded from all sessions of the experiments. All the participants excluded were all from the sessions of visual modality (3 from the Mix session and 2 from the Block session). This result reflects higher noise level in visual modality, which partially confirmed our consideration at the first place that tasks of temporal reproduction in auditory domain may have higher precisions.
+
+```{r loadData, echo = FALSE, warning=FALSE, include=FALSE, results = 'asis'}
+
+```
+
+## Figure 1 mean reproduction and relative reproduction error
+
+1. The mean reproductions monotonically increased with test intervals in all four sessions;
+2. Under the Mix sessions,  participants tended to overestimate the short intervals and underestimate the long ones, this is the classic characteristic of 'central tendency' effect. To further illustrate this effect, we calculate the Relative Reproduction Error that was defined as the difference between the reproduction and the tested interval divided by the tested interval. This parameter represents how the estimation deviates from the actual interval, where the positive number indicates overestimation and negative number indicates underestimation. 
+3. relative reproduction error.
+(the whole range of the error) As is shown in figure2(right panel), we could see clearly how the response deviates from the actual duration. The maximum error in this study  was within 32%. This is a large improvement in accuracy compared to the previous study(Lewis et.) where the maximum deviation from the estimation on 68ms was approximately 500 percent. This result also partially confirmed our previous consideration that tasks of reproduction under 300ms may produce higher noise level. 
+
+In general, the errors within sub-seconds range were relatively high where motor noise may still play an important role in the performance. The central tendency effect was clearly illustrated under the Mix condition from both modalities, where the short intervals (shortest three intervals) were overestimated and the long ones were overestimated. 
+
+(Block condition)However, this same tendency of the deviations was not shown under block conditions.  Eight of nine intervals under block conditions were overestimated from both auditory and visual modality. Nevertheless, within the long block ranges from 9s to 16.8s, we could still see the central tendency effect, where the shortest intervals was estimated and the longest interval were overestimated. 
+
+Seen from modality, responses from auditory modality showed less errors compare to the visual domain. 
+
+## Central Tendency Effect
+
+After removing the outliers through the criteria mentioned above, grand-averaged estimations against intervals from four sessions of this study were plotted in Figure 3(left penal). As shown in the results, estimations times monotonically increased with sample intervals.  A classic central tendency effect was shown from Mix sessions of both experiments, where subjects tended to overestimate the short intervals and overestimate the long intervals. 
+
+By calculating the differences between mean estimations and the corresponding intervals, mean estimation errors are shown in the right penal of Figure 3. A clear central tendency effect was revealed especially during the long intervals of Mix sessions of both experiments, where negative values are shown indicating a underestimations of intervals.
+In the meanwhile, smaller absolute values of reproduction errors indicate less bias from audition than vision, which is consistent with Cicchini’s study of interval timing (Cicchini 2012) that subjects responded veridically in auditory timing than visual timing.
+
+
+```{r figure1, echo = FALSE, warning=FALSE, message=FALSE, fig.height= 6, fig.width=4}
+
+```
+
+
+## 
+
+```{r figure_mean_cv, echo = FALSE, warning=FALSE, message=FALSE, fig.height= 3, fig.width=4}
+
+```
+
+##  Figure 4: sd of production/sd of reproduction
+
+As has been mentioned above, motor noise from the task may play an important role in affecting the accuracy. 
+
+The perceptual time is consist of the 'predicted' perceptual time and the noise(R = I + N). And the noise is consist of context biases and motor noise. 
+
+(V_Rd)2 = (Vi)2 + (Vn)2
+
+By calculating the ratio of variance between the production and reproduction, we could get the percentage of motor noise in the whole noise.
+
+- Figure 5: Block-independent analysis
+
+1. Mean values of the CVs 
+
+We calculated the mean values of CVs from each block. By analyzing the data by blocks, we divided the tested intervals into three sub-groups: short, medium and long, where intervals from short group range within sub second(300ms to 900ms), medium group ranges from 1s to 9s and long group ranges from 11s to 16s.
+
+## Inter-Trial Effects 
+
+illustrates the central tendency effects more, in the Mix conditions(under three categories: longer, equal and shorter )
+
+# Discussion
+
+# References
+```{r create_r-references}
+r_refs(file = "ref.bib")
+```
+
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+\setlength{\parskip}{8pt}

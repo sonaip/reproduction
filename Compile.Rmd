@@ -1,0 +1,56 @@
+---
+title: "Contextual influences on coefficient variances in duration reproduction"
+shorttitle: "contextual influences on CV"
+author: 
+  - name: Yue, Ren
+    affiliation: "1"
+    address: Leopoldstr. 13, Munich, Germany, 
+    email: yue.ren@psy.lmu.de
+  - name: Shi, Zhuanghua 
+    corresponding: yes    # Define only one corresponding author
+    affiliation: "1"
+    email: strongway@psy.lmu.de
+  - name: Müller, Hermann J. 
+    affiliation: "1,2"
+    email: hmueller@psy.lmu.de
+    
+affiliation:
+  - id: 1
+    institution: General and Expeirmental Psychology, LMU Munich, Munich, Germany
+  - id: 2
+    institution: Department of Psychological Science, Birkbeck College, London, UK
+    
+abstract: |
+
+ A constant coefficient of variation (CV, also known as scalar property) is a key signature for sub- and supra-second timing(Gibbon, 1977; Shi, Church, & Meck, 2013). In certain situations scalar property can be violated, particularly for large range of interval timing(Bizo, Chu, Sanabria, & Killeen, 2006). For example, by employing visual timing reproduction task, Lewis and Miall(2009) found a continuous logarithmic decrease in CV with increase of reproduced duration. However, most finding for violation of scalar property did not control contextual biases(e.g., interval mixing), which could be a major factor causing the violation of scalar property. To address this issue, we conducted two experiments under visual and auditory modality, respectively, where interval mixing was considered.Experiment 1 was conducted under visual modality, nine intervals range from 300ms to 16s were randomly mixed across trials in session 1(block-mix condition), where in session 2(block-separate condition), the same intervals were divided into three subgroups (300ms to 900ms, 1s to 9s, 10s to 16s) for testing in separated blocks. Reproduction task was employed by key press; Experiment 2 used identical paradigm under auditory modality. Results in visual modality showed a significant difference(p>0.05) of the tendency of CV between two sessions, where a continuous decrease in CV against increasing duration was found under block-mix condition, while a decreasing trend of CV was now shown. In auditory modality, decreasing trends of CV were shown under both conditions, but with gentle trends (smaller slope value of simple logarithmic regression) and higher task precision. By ruling out the potential interval mixing effect, the estimated CVs for sub- and supra-second reproduction were rather similar in visual modality, indicating that violation of scalar property in interval reproduction is partially caused by duration mixing. Modality difference was shown in Experiment 2, where no interval mixing effect was shown in auditory timing. The findings suggest that contextual calibration, such as interval mixing, may play an important role in timing precision. In addition, different strategies may also be adopted for different modalities of timing.
+
+note: |  
+  This research was supported by the German Research Foundation SH 166/3-1 to ZS. The funding institution had no role in study design, data collection, analysis, decision to publish, or preparation of the manuscript. 
+
+
+keywords: "reproduction, coefficient variation (CV), Contexts"
+
+
+class: man
+lang: english
+figsintext: no
+lineno: yes
+bibliography: ref.bib
+
+output: papaja::apa6_pdf
+
+---
+
+```{r child = 'Introduction.Rmd'}
+
+```
+
+```{r child = 'Methods.Rmd'}
+
+```
+
+```{r child = 'Discussion.Rmd'}
+
+```
+
+

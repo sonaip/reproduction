@@ -1,0 +1,159 @@
+---
+title: "Reproduction_Manuscript"
+author: "Yue"
+output:
+  pdf_document:
+    fig_caption: yes
+    fig_height: 3
+    fig_width: 4
+  html_document: default
+  word_document:
+    fig_caption: yes
+    fig_height: 3
+    fig_width: 4
+---
+
+
+```{r, echo=FALSE, warning =FALSE, include=FALSE}
+usePackage <- function(pk){
+  for (p in pk) {
+    if (!is.element(p, installed.packages()[,1])) install.packages(p, dep = TRUE)
+    library(p, character.only = TRUE)
+  }
+}
+usePackage(c('knitr','R.matlab','data.table','xtable','dplyr','tidyr',
+             'grid','gridExtra','broom','ggplot2','multcomp','nlme'))
+
+output <- opts_knit$get("rmarkdown.pandoc.to")
+opts_chunk$set(tidy=FALSE, echo=FALSE, dev = c("pdf"), dpi=300)
+options(xtable.comment=FALSE, fig.width = 4, fig.height=3, digits = 2) #hide % comments
+theme_set(theme_classic())
+
+
+read_chunk('Reproduction_code_bw.R')
+
+```
+
+### Introduction
+
+background
+In general: measuring 
+The importance of timing reflects obviously in special fields.
+professional members of orchestra could distinguish the slightest changes in tempo []
+sports man, like surfing, to face the environment as well as controlling of muscle, coordinating of body control.
+people are surprisingly good at timing even without long-term professional trainings. 
+example: people are surprisingly better at measuring than we thought, where Weber’s law defines the just recognizable distinction 
+Weber’s law to SET
+The study of human timing had long been investigated where SET as a predominant model in explaining human timing precision.
+scalar property
+SET, definition.
+
+previous studies against SET
+violations of Weber’s law
+Lewis study. their results represent two major results: broad range of time reproduction follows a decrease of CV, especially, the circadian judgments from previous study fit the regression of decreasing CVs. Secondly, no evidence for multiple mechanisms was found, which was reflected by a continuous tendency of CVs, indicating an integrated mechanism for human timing.
+our doubts:
+Effects of temporal context.
+regression can happen really fast(maybe some references). previous trial has an effect for the following trial, so first doubt: previous interval would have an effect on the following trial in tasking.
+and the temporal context for testing affects a lot, since the reproduction are often drag down to the mean(Gibbon 1977), the precision of the reproduction can be affected. 
+
+
+
+Gap:  Even though the circadian judgements from previous study() fits the regression of decreasing CVs 
+
+what we want to do
+to test whether SET remains true by excluding the 
+what we do
+replicate the same task within a shorter time range, and in the mean while, by dividing the intervals into different groups for testing, 
+
+our assumptions(2 major)
+interval mixing plays an important role in human timing
+different modalities may reflect different results in addition to precision
+
+
+
+### Methods
+
+*Visual Reproduction Experiment*
+
+
+#### Participants
+
+#### Apparatus and stimuli
+
+#### Paradigm
+(insert the paradigm figure here)
+
+
+
+### Results
+#### Data quality analysis
+
+Data recording: The time of key pressing from subjects during both the production and reproduction were recorded during task. For further analysis, valid data need to fit two criteria : Firstly, to exclude motor noise during tasking, since the task that required from the participants was to release the key after the termination of the each stimulus,  only trials with key release after the stimulus offset but within 1 second were kept in the analysis; Secondly, judging from the reproduction time, those trials with a reproduction time 15% greater than the corresponding intervals were regarded as outliers.
+
+
+
+```{r loadData, echo = FALSE, warning=FALSE, include=FALSE, results = 'asis'}
+
+```
+
+
+```{r mean_reproduction, echo=FALSE,, warning=FALSE, results = 'asis'}
+
+```
+
+Figure Standard deviations against tested intervals
+
+#### Central Tendency Effect
+
+After removing the outliers through the criteria mentioned above, grand-averaged estimations against intervals from four sessions of this study were plotted in Figure 3(left penal). As shown in the results, estimations times monotonically increased with sample intervals.  A classic central tendency effect was shown from Mix sessions of both experiments, where subjects tended to overestimate the short intervals and overestimate the long intervals. 
+
+By calculating the differences between mean estimations and the corresponding intervals, mean estimation errors are shown in the right penal of Figure 3. A clear central tendency effect was revealed especially during the long intervals of Mix sessions of both experiments, where negative values are shown indicating a underestimations of intervals.
+In the meanwhile, smaller absolute values of reproduction errors indicate less bias from audition than vision, which is consistent with Cicchini’s study of interval timing (Cicchini 2012) that subjects responded veridically in auditory timing than visual timing.
+
+```{r mean_reproduction_error, echo = FALSE, warning=FALSE, message=FALSE, fig.height= 3, fig.width=4}
+
+```
+
+
+```{r RRE_figure, echo = FALSE, warning=FALSE, message=FALSE, fig.height= 3, fig.width=4, fig.cap='Relative Reproduction Error'}
+
+```
+
+Relative reproduction errors were defined by calculating the difference between estimated response and tested value devided by the tested value. 
+
+
+```{r CV_figure, echo = FALSE, warning=FALSE, message=FALSE, fig.height= 3, fig.width=4, fig.cap='Correlation of Variance'}
+
+```
+
+
+
+
+```{r SD_figure, echo=FALSE, warning=FALSE, message=FALSE, fig.height= 3, fig.width=4, fig.cap='Standard Deviations'}
+```
+
+
+```{r ANOVA_CV, echo = FALSE, warning=FALSE, message=FALSE, results = 'asis'}
+# ? how to preserve ANOVA table in html/word documents/screenshots
+```
+
+
+```{r ANOVA_SD, echo = FALSE, warning=FALSE, message=FALSE, results = 'asis'}
+
+```
+
+```{r ANOVA_RRE, echo = FALSE, warning=FALSE, message=FALSE, results = 'asis'}
+
+```
+### Discussion
+
+#### Central Tendency Effect
+In the same interval environment, the 
+
+#### Mixing Effect
+
+#### Modality difference
+
+#### Possible Explanation
+
+

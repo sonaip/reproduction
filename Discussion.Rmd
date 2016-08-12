@@ -1,0 +1,15 @@
+---
+title: "Discussion"
+author: "Yue"
+date: "28 June 2016"
+output: html_document
+---
+
+Mean CVs
+In auditory modality, accuracy is higher(from the relative reproduction error)
+
+Explaining CVs decreasing using Bayesian model
+Using tested interval instead of mean estimation for calculation(briefly why)
+
+what is the model(majorly Jazayeri’s model for the calculation and strongway’s explanation )
+how the CVs could be predicted of a decreasing trend, within one temporal context
