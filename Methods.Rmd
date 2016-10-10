@@ -2,36 +2,68 @@
 title: "Methods"
 author: "Yue"
 date: "28 June 2016"
-output: html_document
+output: pdf_document
 ---
 
-```{r message = FALSE, warning = FALSE}
+```{r echo= FALSE, warning = FALSE, include=FALSE}
 source('loadPackages.R')
 usePackage('papaja')
 apa_prepare_doc() # Prepare document for rendering
 read_chunk('Reproduction_code_2.R')
 ```
-### (Model Explanation) Bayesian model in explaining  
 
-In 2010, Jazayeri and Shadlen's study reveals the connections between temporal events and anticipate actions, where statistical inference of Bayesian observer was used  
+## Experiment 1
 
-### Experiments
-Experiment 1 aimed to examine the precision of duration reproduction in visual modality with which participants could estimate a number of intervals ranging from 300ms to 16s. We adopted classical production-reproduction task in the study, which requires from participants the reproduction of the duration of a previously presented stimulus as accurate as they could (Figure 1).  Two conditions: block-mix and block-group, were used as separate sessions in the experiment. Under the block-mix condition, all the intervals adopted in the experiment mixed in one block while under the block-group condition, same intervals were divided into different groups ranking from the shortest to the longest.
+Experiment 1 aimed to examine the precision of duration reproduction under visual modality with which participants could estimate a number of intervals ranging from 300ms to 16s. We adopted classical production-reproduction task in the study, which requires from participants the reproduction of the duration of a previously presented stimulus as accurate as they could (Figure 1).  Two conditions: as address *block-mix* and *block-group* in this paper, were used as separate sessions in the experiment, in terms of whether all tested intervals were mixed within one block or grouped into different blocks according to their durations. By doing this, even though the same interval was tested, the overal temporal context was totally different, where the effect of context could be investigated through further analysis. Before testing, participants were fully aware of this distinction.
 
 ![Paradigm for production-reproduction task in each trial. The task consists of two phases: (i). Production phase, which was initiated by a key press, causing the color change of the visual square from grey to white. After the presentation of the stimulus for the certain interval, the changing of the color back to grey indicated the termination of presentation where requested key release from subjects. (ii). Reproduction phase, identically initiated as in the presentation phase, subjects were asked to terminate the reproduction phase according to their estimation. In the meanwhile, the duration of the key holding was recorded as ‘reproduction estimation’ for further analysis. (auditory modality also included in this scheme)](paradigm.pdf)
 
-## a) Participants
+### a) Participants
 
 Initially 27 participants (16 female, mean age of 24.1) that divided into two groups for different sessions were recruited for the experiment. 5 participants were outliers (2xSD from the group mean). In each session of the experiment, data from 11 participants were adopted. Participants were given written informed consent in accordance with the declaration of Helsinki (2008), and were paid for their participation of 8 Euros per hour. All had normal or corrected-to-normal vision, normal hearing, and no somatosensory disorders.
 
-## b) Apparatus and Stimuli
+### b) Apparatus and Stimuli
 
 The experiments took place in an isolated cabin with dim lit, sound attenuated environment. Visual stimuli that employed in the experiments were squares (##° x ##°) presented on a 21-inch CRT monitor with a refresh rate of 100Hz, subtending 36.5° x 27° at the subjects view distance. Two colors were chosen for the stimuli of visual squares: gray (## cd/m2) and white (## cd/m2), while background was black (## cd/m2).
 
-## c) Procedure and Design
+### c) Procedure and Design
 
 9 log-spaced intervals, 0.30, 0.49, 0.81, 1.33, 2.19, 3.60, 5.92, 9.73, 16.00s, were used for duration reproduction.  In the block-mix session, all 9 intervals were used within one block while in the block-group session, 9 intervals divided into three groups that ranging respectively from: short: 0.30-0.81s, intermediate: 1.33-3.60s, long: 5.92-16.00s, were used in different blocks. 
 
 Each session took the participant approximately 1.5 hours in 15 blocks and each interval repeated 30 times in the whole session. Participants were asked to take a break outside the cabin after half trails of the whole experiment. To prevent from getting the duration estimation by counting, participants were required to avoid any form of counting during both presentation and reproduction phase. Before each session, a short-term training session consists of three blocks (9 trials in each block) were employed. For the block-mix condition, all the nine intervals were trained in random order within the same block while for the block-group condition, all the intervals were trained in three blocks corresponding to three time ranges (mentioned above), and counter-balanced within participants.
 
 In each trial, the task consisted of two phases: production and reproduction phase. A trial started with a word cue ‘Presentation’ for 300ms, followed by a white square on the center of the monitor. Participants were instructed using the left index finger to press left arrow key to initiate the production phase. The key press triggered the color change of square from white to gray. After a given interval, selected from the 9 intervals, the color of the square automatically changed the gray back to white, indicating the termination of stimulus. Participants were also instructed to release the key as soon as possible. After an interval for 250ms,  a word cue of ‘reproduction’ was appeared on the center screen for 300ms, followed by a white square appeared on the center of the screen, prompting participants to reproduced the given duration by pressing the right arrow key with their right index finger. The key press immediately triggered the change of square color from white to gray. Participants were ask to keep pressing the key until they thought the pressed interval was the same duration in the production phase, and then to release the key immediately. The key release also turned the color of the square from gray to white, indicating the offset of the reproduction. After a certain interval (randomly chosen from 500ms to 1000ms), a next trial began. 
+
+In the Lewis’s study, a distraction task was conducted simultaneously with the reproduction task where participants were asked to read out loud random numbers that showed up on the monitor. We didn’t adopt this experimental setting for two main reasons: Firstly,  mono tasks requires lower task difficulty; Secondly, in the second experiment of our study, same task was conducted in different modalities, the distraction task would cause unnecessary distraction from other modalities. 
+
+
+## Experiment 2
+
+By adopting the identical paradigm, experiment 2 aimed to examine the precision of temporal reproduction within auditory modality. 
+
+### a) Participants
+
+24 participants(12 femail, mean age of 25.3) from the same subject pool as in experiment 1 were recruited for the experiment, among which twelve took part in the *block-mix* session. Participants were given written informed consent in accordance with the declaration of Helsinki (2008), and were paid for their participation of 8 Euros per hour. All had normal or corrected-to-normal vision, normal hearing, and no somatosensory disorders.
+
+### b) apparatus and Stimuli
+
+The same experimental cabin was used for test here as for experiment 1. Auditory stimuli were cut out for required intervals from an auditory file of natural water flow sound  and presented through two loudspeakers flanking the computer screen and lying in the same plane 60cm from the participant. Speaker separation was 40cm and stimuli intensity was 60dB at the hearing source.
+
+### c) Procedure and Design
+
+Identical paradigm as in experiment 1 was used in this experiment(figure 1). There are two phases of the experiment: presentation and reproduction. Before each trial begins, there was a 300ms text cue of either ‘presentation’ or ‘reproduction’ appeared in the middle of the monitor, then changed to a fixation at the same position. Key press required from the participants triggered the presentation of the auditory stimulus, but no changed of the monitor would appear during the response from participants, which made sure the mono modality employed by the task. 
+
+
+## Analysis
+(Here, we give the basic descriptions for all the parameters that would be used for further analysis, reference cicchini)
+
+Following Jazayeri et al(2010) and Cicchini et al(2012), the total error of estimation could be partitioned into two parts: bias from the actual presentation and the relative precision reflecting how scattered distributed of repetitive estimations(Coefficient of variation, CV).    
+ 
+To illustrate to what extent the response was biased from real values, we calcuThe normaliased Relative Reproduction Error(Rei). For each interval i, the Rei is given by putting the difference between the Reproduction(Ri) and the Sample Duration(Si), divided by the sample duration. The Rei is scaled with -1 to 1, where negative numbers relect underestimated responses and positive numbers relects overestimated reponses.
+Rei = (Ri-Si) / Si
+
+The Coefficient of Variance is calculated by the standard deviation of the reproductions at each duration, normalized by the duration.
+
+CVi = sd(Ri) / Si(mean)
+ 
+

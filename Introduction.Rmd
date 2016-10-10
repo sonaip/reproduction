@@ -2,74 +2,37 @@
 title: "Introduction"
 author: "Yue"
 date: "28 June 2016"
-output: html_document
+output: pdf_document
 ---
 
-^[Introducing importance of timing to daily activity. Need explanative, examples]
-Humans are surprisingly good at timing and sensorimotor coordination. For example, drivers race in Formula One motor race require a precise control under milliseconds at the speed up to 300km/h. A tiny deviation may cause a crash accident, as happened to Fernando Alonso in recent Australian Gran Prix. Dancing, as we all enjoy, requires accurate sensorimotor coordination to perform a perfect harmony with your partner. Not only for subsecond and seconds, we are also good at macro-level time estimation. Early work by Jürgen Aschoff using an underground 'bunker' to isolate participants from any external timing cues showed that we can accurate maintain 24-hour circadian rhythms. ^[Yue, here you need to find related literature and perhaps other good examples. ]
 
-^[Introducing precision measure - CV and related Weber's law. Note, 'accuracy' is usually for the deviation from the mean in the literature. 'precision' is for the variability of estimation.]
+The 10,000 hour-rule might be controversial in bringing out the best of you, but no one could deny the importance of sufficient practice. To achieve a debut of recital for a pianist, a twenty-year training is expected.As well as craving for exceptional skills, how to maintain to be good is equally important, especially in the temporal estimation. It is not affordable to be good just once in a while, for example, during a Formula 1 race competition, a minor mistake will lead to a life-threaten situation. 
 
-One common measure of relative precision of time estimation is coefficient of variation (CV) ^[citations of CV]. Mathematically, it is defined as the ratio of the standard deviation $\sigma$ to the mean $\mu$:
+In terms of the estimation of sensory information, Weber’s law provided us a widely accepted law in describing the sensitivity of perceptual estimaion, where the  the linear relation between sensory estimation and the variance of the corresponding magnitude. As is also referred to as the scalar property(some important papers) within temporal estimation, this law also predicts a constancy of relative precision of estimation: the standard variation in estimation divided by the mean estimation, where the term coefficient of variance(CV) was defined[1].
 
-$$ c_v = \frac {\sigma}{\mu} $$
+CV = Std / Mean     (1)
 
-Early animal studies on timing (e.g., Catania 1970) showed one remarkable feature of time estimation. When subjects (e.g., pigeons) were reinforced if their latency to peck after the onset of a key light exceeded some minimum criterion values $T$, the variability of the time estimation is proportional to the anchor $T$. But the ratio of the standard deviation to the mean latency remained approximately constant across different $Ts$. This rescaling property led to a late development of scalar timing theory (Gibbon, 1984, 1991). The constant CV suggests the difference limen for duration judgments is closely related to Weber-Fechner's law, which has been widely accepted in describing the sensitivity of measuring perceptive magnitude. 
+Previous studies in investigating CVs of interval timing, revealed various results. For example, within different ranges of durations, numbers of stimuli, different methods in approaching the estimations, etc…(several papers should be added here:
+a review paper of whether weber’s law fits time perception. Of the (non)scalar property of time perception. simon grondin.
 
-^[here introduce literature that confirm the constant CVs.]
+)
 
-~According to the law, the variable of estimation is proportional to the magnitude of the stimuli, where the just noticeable difference is stated. Dubbed the ‘scalar property’ (Gibbon, Meck) within the field of interval timing, this law predicts the variation of the estimated intervals should increase linearly with the interval value . So by calculating the standard deviation in estimates divided by the corresponding interval, termed coefficient of variance(CV), this measurement should remain constant across a range of intervals within single mechanism of time perception.~ 
+In 1997, Gibbon et al. collected the values of CVs from several studies, where the pattern of CVs intended to be found. ‘Jumps’ in CV was found where different mechanisms of interval timing from different ranges were indicated, at approximately 0.1 and 1.5s. In consistence with this hypothesis over a larger range of intervals,  Lewis et al tested human reproduction of temporal intervals in a range from 68ms to 16.7min, where continuous decrease of CVs against temporal intervals was found. 
+Instead of illustrating the constancy of CVs in all cases, several studies showed the violations of constancy. 
 
-^[previous opposite findings that against constancy of CV]
- ^[Yue, you need to expand the literature here. How did Lewis and Miall did, what did they measured and found - brief text here]. 
+Hypothesis
 
-^[A short note the standard calcuation of CV by using mean estimation of $T$, but this fits for unbiased etimation. Some literature use objective mean, not estimated mean, for example, by Burr's group. Then introduce potential biased estimation influences the CV calculation. And proposed using objective mean.]
+As well as focusing on investigating the effects of different approaches, the range of durations also yields differences in CVs. 
+However, we doubt about the conclusion that the violation of the fundamental percept of timing was found, since temporal context plays an important role in affecting the precision of perception but rather by violating the general law where the standard deviation scales with the temporal intervals. 
 
-Time can also be easily distorted, the feeling for two minutes is definitely different when you are in the middle of a test or you are on the beach in Spain.
+what we do
+- adopted reproduction task, tested same intervals ranging from() in two conditions.
+what we expect to get: decreasing trend disappear in the block conditions
 
-^[construct hypotheis here. Potential influences on CV, such as contextual calibration. ]
-However, we doubt about the conclusion that the violation of the fundamental percept of timing was found, since temporal context plays an important role in affecting the precision of perception but rather by violating the general law where the standard deviation scales with the temporal intervals.    
-
-(Why Bayesian Model in explaining the contextual effect on the precision of perception.)
-Bayesian’s rule provided a integrated framework for temporal perception that combined context bias and perceptual likelihood into one statistical inference(Zhuanghua Shi, David Burr, Jazayeri). 
-
-According to this model, the estimated duration S, which quantified as the posterior probability $P(D|S)$, is determined by two sources of information: The likelihood function P(S|D) that quantifies the statistics of sample intervals consistent with the tested intervals, and the prior probability  distribution function P(S) where the external context was involved that observers may encounter. 
-(need some figure here to illustrate the whole model and how to calculate the relations between the variations)
-
-$$ P(D|S)  P(S|D) P(S)$$
-
-(previous study: bayesian model in explaining temporal bias)
-In 2010, by reproducing time intervals from humans in subsecond-to-second range, Jazayeri and Shadlen suggested  a Bayesian observer associated with the Byes least-squares(BLS) could account for the temporal bias where subjects’s estimations were dependent on both the sample intervals and the prior distribution. In this model, when the likelihood and the prior are independent Gaussians, that is P(S|D)~N(us, ds), P(D)~N(up, dp), the variance of  optimal estimate is 
-
-$$dp^2 *ds^2 / (dp^2 + ds^2) $$
-
-which guarantees a minimum variance among all possible linear weighted combinations between the sensory estimate and the prior.()
-
-(why CV would decrease using the model)
-When applying this model into reproduction task, we could calculate the posterior estimation based on this model.
-For the prior probability, a same temporal context shares one variance dp for all the tested intervals. 
-For each given external duration, Di is corresponding to a variance di from each likelihood function. According to the scalar property, di is proportional to the sample interval Di. 
-
-$$di  k* Di.$$
-(Here we didn’t take motor noise into consideration, only the bias from the perceptual estimations)
-
-Now when we try to predict the CVs of the estimations using this model. According to the definition, CV is the ratio between the standard deviation of the data points and the value of each interval. In this case, for each data point, 
-
-$$CVi = dpi / Di$$
-
-By taking equations () and () into calculation, 
-
-$$Cvi  1/Di (CV^2 = dp/ (Di^2 + dp^2/k^2))$$
-
-As have been demonstrated by Jazayeri, the BLS model fits perfectly for the data from temporal reproduction task. Using the same model for prediction in temporal reproduction task, when taking the temporal context into consideration, CVs would decrease as the intervals increase. 
-(So previous studies that suggesting a systematical violation of scalar property is not convincing)
-
-[Using the model, central tendency effect has been well explained where an optimal strategy was adopted in improving the accuracy while tasking.(percussionist) ]
+In order to isolate the influence of temporal context,  we tested the same intervals in two conditions: Mix condition and Block condition. Under the Mix condition, all the intervals were mixed together and tested within one block, while under the Block condition, all the intervals were divided into three groups: short, medium and long, and tested separately. 
 
 
-(what we did: distinguish conditions/using bayesian model to explain the decrease/)
 
-In order to demonstrate this prediction, we conducted four experiments within two modalities: visual and auditory, respectively. For each modality, we tested the same sample intervals for a temporal reproduction task in two conditions: Mix condition and Block condition. Under the Mix condition, all the intervals were mixed together and tested within one block, while under the Block condition, all the intervals were divided into three groups: short, medium and long, and tested separately. 
 
-(what we show, results)
-By dividing sample intervals into two conditions, we anticipated the condition difference where CVs show different tendencies against intervals. We calculated the mean CVs for each tested interval, simple logarithmic regressions were fit for data from each experiment. A condition difference was significantly illustrated where under Mix condition from both modalities, a decreasing tendency was found while under Block condition, 
+
+

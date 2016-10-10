@@ -4,12 +4,48 @@ author: "Yue"
 date: "28 June 2016"
 output: html_document
 ---
+Basically we don't know whether the tendency of relative precision against time. CVs are easily distorted by temporal context, it's not an illustration of relative precision anymore. Even if in our data, within the block sessions, CVs also decrease, the actual tendency remains unknown. Sub-seconds parts could manipulate the tendency by including high motor noise, since the last two sessions revealed no similar decreasing.
 
-Mean CVs
-In auditory modality, accuracy is higher(from the relative reproduction error)
+### (Model Explanation) Bayesian model in explaining the influence from temporal context.  
 
-Explaining CVs decreasing using Bayesian model
-Using tested interval instead of mean estimation for calculation(briefly why)
+In 2010, Jazayeri and Shadlen's study reveals the connections between temporal events and anticipate actions, where statistical inference of Bayesian observer was used.  
 
-what is the model(majorly Jazayeri’s model for the calculation and strongway’s explanation )
-how the CVs could be predicted of a decreasing trend, within one temporal context
+
+Bayesian’s rule provided a integrated framework for temporal perception that combined context bias and perceptual likelihood into one statistical inference(Zhuanghua Shi, David Burr, Jazayeri). 
+
+According to this model, the estimated duration S, which quantified as the posterior probability P(D|S), is determined by two sources of information: The likelihood function P(S|D) that quantifies the statistics of sample intervals consistent with the tested intervals, and the prior probability  distribution function P(S) where the external context was involved that observers may encounter. 
+(need some figure here to illustrate the whole model and how to calculate the relations between the variations)
+
+ P(D|S)  P(S|D) P(S)
+
+(previous study: bayesian model in explaining temporal bias)
+In 2010, by reproducing time intervals from humans in subsecond-to-second range, Jazayeri and Shadlen suggested  a Bayesian observer associated with the Byes least-squares(BLS) could account for the temporal bias where subjects’s estimations were dependent on both the sample intervals and the prior distribution. In this model, when the likelihood and the prior are independent Gaussians, that is P(S|D)~N(us, ds), P(D)~N(up, dp), the variance of optimal estimate is 
+
+dp^2 *ds^2 / (dp^2 + ds^2) 
+
+which guarantees a minimum variance among all possible linear weighted combinations between the sensory estimate and the prior.()
+
+(why CV would decrease using the model)
+When applying this model into reproduction task, we could calculate the posterior estimation based on this model.
+For the prior probability, a same temporal context shares one variance dp for all the tested intervals. 
+For each given external duration, Di is corresponding to a variance di from each likelihood function. According to the scalar property, di is proportional to the sample interval Di. 
+
+di  k* Di.  (Here we didn’t take motor noise into consideration, only the bias from the perceptual estimations)
+
+Now when we try to predict the CVs of the estimations using this model. According to the definition, CV is the ratio between the standard deviation of the data points and the value of each interval. In this case, for each data point, 
+
+CVi = dpi / Di
+
+By taking equations () and () into calculation, 
+
+Cvi  1/Di (CV^2 = dp/ (Di^2 + dp^2/k^2))
+
+As have been demonstrated by Jazayeri, the BLS model fits perfectly for the data from temporal reproduction task. Using the same model for prediction in temporal reproduction task, when taking the temporal context into consideration, CVs would decrease as the intervals increase. 
+(So previous studies that suggesting a systematical violation of scalar property is not convincing)
+
+[Using the model, central tendency effect has been well explained where an optimal strategy was adopted in improving the accuracy while tasking.(percussionist) ]
+
+
+### CVs in block sessions
+
+Seen from the regression results, a decreasing tendency was found of the data from block sessions, it could be arised from the higher value from short intervals. (Further musicians with a high level of performance, may produce higher precision )

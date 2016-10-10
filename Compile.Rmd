@@ -1,5 +1,5 @@
 ---
-title: "Contextual influences on coefficient variances in duration reproduction"
+title: "CVs are for sure decreasing: A bayesian explanation for context caliberation in temporal reproduction"
 shorttitle: "contextual influences on CV"
 author: 
   - name: Yue, Ren
@@ -46,6 +46,10 @@ output: papaja::apa6_pdf
 ```
 
 ```{r child = 'Methods.Rmd'}
+
+```
+
+```{r child = 'Results.Rmd'}
 
 ```
 
